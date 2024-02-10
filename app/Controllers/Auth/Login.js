@@ -18,7 +18,7 @@ login = async (req, res) => {
   return res.status(OK).json({
     success: true,
     token: token,
-    message: "Sucessfully loged in. ",
+    message: "Sucessfully loged in.",
     error: null,
   });
 };
