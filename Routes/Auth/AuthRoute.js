@@ -22,7 +22,7 @@ Router.get(
     failureFlash: true,
     session: false,
   }),
-  LoginController.login
+  LoginController.GoogleLogin
 );
 
 // GITHUB SSO ROUTE
