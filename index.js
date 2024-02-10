@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 9000
+const port = process.env.PORT || 9000
 
-const UserController = require('./app/Controllers/UserCon')
+const AuthRouter = require('./Routes/Auth/AuthRoute')
 
-app.get('/', UserController.testCon )
-app.get('/one/:id', (req, res) => res.send('Hello one'))
+app.use(AuthRouter)
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
